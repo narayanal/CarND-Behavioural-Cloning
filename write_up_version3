@@ -1,0 +1,22 @@
+Please check model.ipynb file for histogram
+
+As, there are more images with steering angle 0 and it will add strong bias to go stragiht.
+
+The steps I have taken to solve this issue is:
+
+Read the entire data set, if the steering angle is zero, only consider 20% data of it.
+I have achieved it using random generator function.
+
+Please check the following code snippet.
+
+def add_image_to_set(img, y): 
+    skip = 0
+    rand = np.random.randint(100) 
+    if abs( y ) == 0.0 and rand < 80 :
+     skip = 1
+    else:
+     features.append(img)
+     labels.append(y)
+    return skip
+
+

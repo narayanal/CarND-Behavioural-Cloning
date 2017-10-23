@@ -1,0 +1,29 @@
+Project details:
+
+Data collection:
+I have tried collecting the data using simulator. 
+But I have used the udacity data set for training the model.
+
+Pre-processing:
+I have used all the 3 images from the dataset (left, right, center) and by adding shift in steering angle
+Used the left:right:center images with ratio 1:1:2 and randomly choosing the images. check the function random_load_images.
+
+The intial data contains, steering angle with more number of zeros.
+To counter this, I have considered only 0.2 percentage of data containing zero steering angle and ignored other data.
+
+Data augmentation:
+I have augmented data using the techniques of Flip, adjust brightness, transform images and adjusted the steering angle accordingly.
+
+Training model:
+I have tried Comma.ai model and Nvidia model.
+Nvidia model has given better results than Comma.ai model
+
+Lessons learnt:
+Intially I tried, training the model with out cropping the image, assuming model should be able to train the things. 
+In the autonomous mode, i was never able to complete the track.
+
+But later, I have realised, cropping the image, according to the area of interest is very important.
+This is very important.
+It helped me to train the model faster and also it produced better results and the autonomous car able to complete the track.
+
+

@@ -1,0 +1,17 @@
+CHANGES REQUIRED IN MODEL.PY TO RUN
+
+1. Set the variable "path" to the file path, which contains the "IMG folder" and "driving_log.csv"
+2. Model is trained by using udacity training data.
+   https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip
+
+TO RUN THE SIMULATOR IN AUTONOMOUS MODE
+1. The model is trained by cropping the images.
+2. So, changes required in drive.py file.
+3. In drive.py, necessary changes to crop the image are included
+
+
+Model was compiled using, Nvidia GTX 950M GPU and it is tested using the same.
+For track 1, it is working fine. For track 2, it is not working.
+
+
+
